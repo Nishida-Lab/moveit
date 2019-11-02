@@ -6,6 +6,7 @@ add_definitions(-std=c++11)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   moveit_core
+  moveit_ros_planning_interface
   pluginlib
   chomp_motion_planner
   moveit_experimental
@@ -23,7 +24,7 @@ find_package(Boost REQUIRED)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME}
-  CATKIN_DEPENDS roscpp moveit_core pluginlib
+  CATKIN_DEPENDS roscpp moveit_core pluginlib moveit_ros_planning_interface
 )
 
 include_directories(
